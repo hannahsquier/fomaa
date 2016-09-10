@@ -1,0 +1,30 @@
+<section class="success" id="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 text-center">
+                <h2>Art in the Neighborhood</h2>
+                <hr class="star-light">
+            </div>
+
+            <% neighborhood.arts.each do |art| %>
+                <div class="col-xs-12 col-sm-6 portfolio-item">
+                    <div class="row">
+                        <h3><%= art.name %> </h3>
+                        <h6>by <%= art.artist %></h6>
+
+                        <div class="col-xs-3">
+                            <% if art.image_url %>
+                                <%= image_tag art.image_url, class: "img-rounded img-responsive" %>
+                            <% end %>
+
+                        </div>
+                    </div>
+
+
+                 </div>
+
+            <% end %>
+        </div>
+    </div>
+</section>
