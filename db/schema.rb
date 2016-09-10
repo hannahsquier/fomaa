@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160910180140) do
+ActiveRecord::Schema.define(version: 20160910220230) do
+
+  create_table "arts", force: :cascade do |t|
+    t.integer  "neighborhood_id"
+    t.string   "lat"
+    t.string   "lng"
+    t.string   "artist"
+    t.string   "image_url"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "name"
+    t.index ["neighborhood_id"], name: "index_arts_on_neighborhood_id"
+  end
 
   create_table "bars", force: :cascade do |t|
     t.string   "name"

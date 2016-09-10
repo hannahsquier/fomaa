@@ -5,9 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "csv"
 
-  NEIGHBORHOODS = ["Mission District", "Castro District" , "Haight Ashbury", "Marina", "SOMA", "Financial District", "Chinatown" , "Hayes Valley", " Japantown", "Nob Hill", "Noe Valley", "North Beach", "Pacific Heights", "Potrero Hill", "Presidio", "Richmond", "Russian Hill", "Sunset", "Tenderloin"]
+Neighborhood.destroy_all
+Art.destroy_all
+
+  NEIGHBORHOODS = ["Mission District", "Castro District" , "Haight Ashbury", "Marina", "SOMA" , "Hayes Valley", "North Beach", "Pacific Heights", "Presidio"]
 
   NEIGHBORHOODS.each do |neighb|
     Neighborhood.create(name: neighb)
   end
+
+
+CSV.read("public/art.csv") do |row|
+  neighb = Neighborhood.find_by_name(row.first)
+  neighb.arts << Art.create( {} )
+end

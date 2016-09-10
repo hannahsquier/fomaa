@@ -4,9 +4,11 @@
     <title>ArtBarCrawl</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <script src="https://code.jquery.com/jquery-1.10.1.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASEqKudGyICaxwHhXNI26baXLKx9QRd-k&callback=initMap"
+    async defer></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -17,7 +19,32 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
 
-  <body data-no-turbolinks>
+  <body data-no-turbolink id="page-top" class="index">
+
+
     <%= yield %>
+
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                <h1>Get out there, and enjoy beautiful San Francisco!</h1>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright Hannah, Ruby, Corinne, Brittany, Solne &copy; Your Website 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
   </body>
 </html>

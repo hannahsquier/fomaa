@@ -4,6 +4,7 @@ class NeighborhoodsController < ApplicationController
   end
 
   def show
+    @neighborhoods = Neighborhood.all
     @neighborhood = Neighborhood.find(params[:id])
     @bars = YelpAPI.new.get_top_bars(@neighborhood).businesses
   end

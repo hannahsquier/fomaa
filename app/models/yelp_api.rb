@@ -11,7 +11,7 @@ class YelpAPI
             token: Rails.application.secrets.yelp_token,
             token_secret: Rails.application.secrets.yelp_token_secret
       })
-    @params = {term: "bars", sort: 2, limit: 10, radius_filter: 1000}
+    @params = {term: "bars", sort: 0, limit: 10, radius_filter: 1000, category_filter: "nightlife"}
   end
 
   def get_top_bars(neighborhood)
