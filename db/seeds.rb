@@ -22,3 +22,10 @@ CSV.foreach("public/art.csv") do |row|
   neighb = Neighborhood.find_by_name(row.first)
   neighb.arts << Art.create( {image_url: row[5], name: row[1], lat: row[3], lng: row[2], artist: row[4] } )
 end
+
+CSV.foreach("public/neighborhood_images.csv") do |row|
+  p "test"
+  neighb = Neighborhood.find_by_name(row.first)
+  neighb.update( image_url: row[1] )
+  neighb.save
+end

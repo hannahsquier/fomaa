@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160910220230) do
+ActiveRecord::Schema.define(version: 20160910231932) do
 
   create_table "arts", force: :cascade do |t|
     t.integer  "neighborhood_id"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160910220230) do
     t.string   "image_url"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.         "name"
+    t.string   "name"
     t.index ["neighborhood_id"], name: "index_arts_on_neighborhood_id"
   end
 
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20160910220230) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image_url"
   end
 
 end
