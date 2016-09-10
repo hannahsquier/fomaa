@@ -1,0 +1,22 @@
+<h1><%= @neighborhood.name %></h1>
+
+
+
+<% @bars.each do |bar| %>
+  <div class="col-xs-12 col-sm-6">
+    <div class="row">
+      <div class="col-xs-3">
+        <%= link_to bar.url, :target => "_blank" do %>
+          <%= image_tag bar.image_url, class: "img-rounded img-responsive" %>
+        <% end %>
+      </div>
+      <div class="col-xs-9" id="bar-info">
+        <%= link_to bar.name, bar.url, :target => "_blank" %><br>
+        Yelp Rating: <%= image_tag bar.rating_img_url %><br>
+        <% bar.categories.each_with_index do |category, index| %>
+          <%= category[0] %><%= "," unless index == bar.categories.length - 1 %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
