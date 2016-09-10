@@ -10,14 +10,16 @@ require "csv"
 Neighborhood.destroy_all
 Art.destroy_all
 
-  NEIGHBORHOODS = ["Mission District", "Castro District" , "Haight Ashbury", "Marina", "SOMA" , "Hayes Valley", "North Beach", "Pacific Heights", "Presidio"]
+  NEIGHBORHOODS = ["Mission", "Castro" , "Haight Ashbury", "Marina", "SoMa" , "Hayes Valley", "North Beach", "Pacific Heights", "Presidio"]
 
   NEIGHBORHOODS.each do |neighb|
     Neighborhood.create(name: neighb)
   end
 
 
-CSV.read("public/art.csv") do |row|
+CSV.foreach("public/art.csv") do |row|
+  p row
+  p row.first
   neighb = Neighborhood.find_by_name(row.first)
-  neighb.arts << Art.create( {} )
+  neighb.arts << Art.create( {image_url: row[5], name: row[1], lat: row[3], lng: row[2], artist: row[4] } )
 end
