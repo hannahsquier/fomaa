@@ -1,0 +1,90 @@
+@import
+url('http://fonts.googleapis.com/css?family=Amarante');
+
+
+body {
+	background-color: #e6e6ea;
+	font-family: : Helvetica;
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	background-color: #f34541;
+
+}
+
+li {
+	float: left;
+	width: calc(100% / 8);
+}
+
+a {
+	text-decoration: none;
+}
+
+li a {
+	text-align: center;
+	color: #f4f4f8;
+	padding: 10px 15px;
+	display: block;
+    border-right: 1px solid #fff;
+
+}
+
+li a:hover {
+	background-color: #ff9999;
+
+}
+
+#wrapper {
+	width: 850px;
+	height: 100%;
+	margin: 0 auto;
+
+}
+
+
+#map {
+	 height: 500px;
+}
+
+
+
+#nav {
+	display: block;
+	background: #f4f4f8;
+	padding-bottom: 10px;
+	
+}
+
+h1 {
+	font-family: 'Amarante', sans-serif;
+	text-align: center;
+	color: #2ab7ca;
+
+}
+
+
+
+
+
+
+
+#dropdown, #hide {
+	padding: 5px;
+	width: 250px;
+	border: solid 1px black;
+	text-align: center;
+	background-color: #fed766;
+	margin: 0 auto;
+
+}
+
+#hide {
+	display:none;
+}
