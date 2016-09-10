@@ -18,8 +18,7 @@ Art.destroy_all
 
 
 CSV.foreach("public/art.csv") do |row|
-  p row
-  p row.first
+
   neighb = Neighborhood.find_by_name(row.first)
   neighb.arts << Art.create( {image_url: row[5], name: row[1], lat: row[3], lng: row[2], artist: row[4] } )
 end

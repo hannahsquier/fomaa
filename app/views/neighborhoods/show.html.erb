@@ -105,7 +105,9 @@
                             <h3><%= art.name %> by <%= art.artist %></h3>
 
                             <div class="col-xs-3">
-                                <%= image_tag art.image_url, class: "img-rounded img-responsive" %>
+                                <% if art.image_url %>
+                                    <%= image_tag art.image_url, class: "img-rounded img-responsive" %>
+                                <% end %>
                                 lat: <%= art.lat %>
                                 lng: <%= art.lng %>
                             </div>
