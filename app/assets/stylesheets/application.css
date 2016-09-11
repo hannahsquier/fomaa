@@ -539,3 +539,7 @@ fieldset[disabled] .btn-success.active {
   text-align: center;
   margin: 10px;
 }
+
+.art-description {
+  font-size: 18px;
+}

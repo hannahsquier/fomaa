@@ -20,11 +20,11 @@ Art.destroy_all
 CSV.foreach("public/art.csv") do |row|
 
   neighb = Neighborhood.find_by_name(row.first)
-  neighb.arts << Art.create( {image_url: row[5], name: row[1], lat: row[3], lng: row[2], artist: row[4] } )
+  neighb.arts << Art.create( {image_url: row[5], name: row[1], lat: row[3], lng: row[2], artist: row[4], link: row[7], description: row[6]  } )
 end
 
 CSV.foreach("public/neighborhood_images.csv") do |row|
-  p "test"
+  puts "seeding"
   neighb = Neighborhood.find_by_name(row.first)
   neighb.update( image_url: row[1] )
   neighb.save

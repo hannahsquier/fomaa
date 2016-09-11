@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160910231932) do
+ActiveRecord::Schema.define(version: 20160911004105) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "arts", force: :cascade do |t|
     t.integer  "neighborhood_id"
@@ -20,8 +23,10 @@ ActiveRecord::Schema.define(version: 20160910231932) do
     t.string   "image_url"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.         "name"
-    t.index ["neighborhood_id"], name: "index_arts_on_neighborhood_id"
+    t.string   "name"
+    t.string   "link"
+    t.text     "description"
+    t.index ["neighborhood_id"], name: "index_arts_on_neighborhood_id", using: :btree
   end
 
   create_table "bars", force: :cascade do |t|
@@ -29,7 +34,7 @@ ActiveRecord::Schema.define(version: 20160910231932) do
     t.integer  "neighborhood_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["neighborhood_id"], name: "index_bars_on_neighborhood_id"
+    t.index ["neighborhood_id"], name: "index_bars_on_neighborhood_id", using: :btree
   end
 
   create_table "neighborhoods", force: :cascade do |t|
