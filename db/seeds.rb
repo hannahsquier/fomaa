@@ -29,3 +29,9 @@ CSV.foreach("public/neighborhood_images.csv") do |row|
   neighb.update( image_url: row[1] )
   neighb.save
 end
+
+CSV.foreach("public/neighborhood_descriptions.csv") do |row|
+  neighb = Neighborhood.find_by_name(row.first)
+  neighb.update( description: row[1] )
+  neighb.save
+end

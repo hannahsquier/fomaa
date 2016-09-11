@@ -19,17 +19,14 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
-  font-family: 'Josefin Slab', serif !important;
-  /*font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
-  font-size: 24px;
-
 }
 p {
-  font-size: 30px;
+  font-size: 20px;
 }
 p.small {
-  font-size: 30px;
+  font-size: 16px;
 }
 a,
 a:hover,
@@ -45,9 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Josefin Slab', serif !important;
-
-  /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -102,10 +97,7 @@ header img {
 }
 header .intro-text .name {
   display: block;
-    /*font-family: 'Josefin Slab', serif !important;*/
-
-  /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2em;
@@ -128,10 +120,7 @@ header .intro-text .skills {
 }
 .navbar-custom {
   background: #2C3E50;
-
-    font-family: 'Josefin Slab', serif !important;
-
-  /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   border: none;
@@ -556,13 +545,18 @@ fieldset[disabled] .btn-success.active {
 }
 
 .special-font {
-  font-family: 'Amatic SC', cursive !important !important;
+  font-family: 'Amatic SC', cursive !important;
   /*font-family: 'Quicksand', sans-serif !important;*/
   /*font-family: 'Shadows Into Light', cursive !important;*/
 
-  font-size: 120px !important;
+  font-size: 100px !important;
 }
 
-#bar-info {
-  font-size: 18px;
+.get-out-there {
+  height: 300px;
+  line-height: 300px;
+}
+
+#closing-words {
+  font-size: 100px;
 }
