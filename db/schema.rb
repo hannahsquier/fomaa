@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160910231932) do
     t.string   "image_url"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "name"
+    t.         "name"
     t.index ["neighborhood_id"], name: "index_arts_on_neighborhood_id"
   end
 

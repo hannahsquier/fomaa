@@ -52,7 +52,7 @@
     </header>
 
     <div class="wrapper">
-        <div id="map" class=<%= @neighborhood.name.downcase.gsub(" ", "-" ) %>></div>
+        <div id="<%= @neighborhood.name.downcase.gsub(" ", "-" ) %>" class="map"></div>
     </div>
 
     <%= render "bars", bars: @bars %>

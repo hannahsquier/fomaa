@@ -33,19 +33,19 @@ function initMap() {
         });
 
 
-         var map = new google.maps.Map(document.getElementById('castro'), {
+         var map = new google.maps.Map(document.getElementByClassName('castro'), {
           center: castro,
           scrollwheel: false,
           zoom: 15
         });
 
-          var map = new google.maps.Map(document.getElementById('haight-ashbury'), {
+          var map = new google.maps.Map(document.getElementByClassName('haight-ashbury'), {
           center: haight,
           scrollwheel: false,
           zoom: 15
         });
 
-           var map = new google.maps.Map(document.getElementById('marina'), {
+           var map = new google.maps.Map(document.getElementByClassName('marina'), {
           center: marina,
           scrollwheel: false,
           zoom: 15
@@ -53,35 +53,35 @@ function initMap() {
 
 
 
-            var map = new google.maps.Map(document.getElementById('soma'), {
+            var map = new google.maps.Map(document.getElementByClassName('soma'), {
           center: soma,
           scrollwheel: false,
           zoom: 15
         });
 
 
-            var map = new google.maps.Map(document.getElementById('hayes-valley'), {
+        var map = new google.maps.Map(document.getElementByClassName('hayes-valley'), {
           center: hayes,
           scrollwheel: false,
           zoom: 15
         });
 
 
-        var map = new google.maps.Map(document.getElementById('north-beacah'), {
+        var map = new google.maps.Map(document.getElementByClassName('north-beacah'), {
           center: nb,
           scrollwheel: false,
           zoom: 15
         });
 
 
-        var map = new google.maps.Map(document.getElementById('pacific-heights'), {
+        var map = new google.maps.Map(document.getElementByClassName('pacific-heights'), {
           center: pac,
           scrollwheel: false,
           zoom: 15
         });
 
 
-        var map = new google.maps.Map(document.getElementById('presidio'), {
+        var map = new google.maps.Map(document.getElementByClassName('presidio'), {
           center: presidio,
           scrollwheel: false,
           zoom: 15
