@@ -130,6 +130,7 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-brand {
   color: white;
+  font-size: 60px !important;
 }
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
@@ -559,4 +560,8 @@ fieldset[disabled] .btn-success.active {
 
 #closing-words {
   font-size: 100px;
+}
+
+.footer-above {
+  text-align: center;
 }

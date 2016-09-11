@@ -14,9 +14,9 @@
 
                     <img class="img-responsive" src="http://ka-advance.com/wp-content/uploads/2015/02/KA-Advance-Art_San_Francisco_Header.png" alt="">
                     <div class="intro-text">
-                        <span class="name special-font">SF Crawl</span>
+                        <span class="name special-font">F.O.M.A.A.</span>
                         <hr class="star-light">
-                        <span class="skills">Your Guide to the San Francisco Art and Bar Scene</span>
+                        <span class="skills">Your SF Guide to Not Missing Out on Art or Alcohol</span>
                     </div>
                 </div>
             </div>
@@ -35,13 +35,13 @@
             <!-- /.navbar-collapse -->
         <!-- /.container-fluid -->
 
-                    <div class="footer-col col-xs-12">
+                    <div class="footer-col col-xs-12 text-center">
 
-                <ul class="nav navbar-nav navbar-right neighb-list">
+                <ul class="nav navbar-nav navbar-right neighb-list text-center">
 
-                     <% @neighborhoods.each do |neighb| %>
-                    <li>   <%= link_to neighb.name, neighborhood_path(neighb.id) %></li>
-              <% end %>
+                <% @neighborhoods.each do |neighb| %>
+                  <li><%= link_to neighb.name, neighborhood_path(neighb.id) %></li>
+                <% end %>
 
                   </ul>
                     </div>
