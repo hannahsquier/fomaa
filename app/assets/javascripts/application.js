@@ -41,11 +41,13 @@ function initMap() {
         var locations = [{lat: 37.777830, lng: -122.406796},{lat: 37.777830, lng: -122.406796},{lat: 37.777830, lng: -122.406796}];
 
         // Create a map object and specify the DOM element for display.
+        if (!!document.getElementById('mission')) {
         var map = new google.maps.Map(document.getElementById('mission'), {
           center: mission,
           scrollwheel: false,
           zoom: 15
         });
+        } else if (!!document.getElementById('castro')) {
 
 
          var map = new google.maps.Map(document.getElementById('castro'), {
@@ -53,26 +55,30 @@ function initMap() {
           scrollwheel: false,
           zoom: 15
         });
+        } else if (!!document.getElementById('haight-ashbury')) {
 
           var map = new google.maps.Map(document.getElementById('haight-ashbury'), {
           center: haight,
           scrollwheel: false,
           zoom: 15
         });
+      } else if (!!document.getElementById('marina')) {
 
            var map = new google.maps.Map(document.getElementById('marina'), {
           center: marina,
           scrollwheel: false,
           zoom: 15
         });
+       } else if (!!document.getElementById('soma')) {
 
 
 
-            var map = new google.maps.Map(document.getElementById('soma'), {
+        var map = new google.maps.Map(document.getElementById('soma'), {
           center: soma,
           scrollwheel: false,
           zoom: 15
         });
+        } else if (!!document.getElementById('hayes-valley')) {
 
 
         var map = new google.maps.Map(document.getElementById('hayes-valley'), {
@@ -80,6 +86,7 @@ function initMap() {
           scrollwheel: false,
           zoom: 15
         });
+        } else if (document.getElementById('north-beacah')) {
 
 
         var map = new google.maps.Map(document.getElementById('north-beacah'), {
@@ -87,6 +94,7 @@ function initMap() {
           scrollwheel: false,
           zoom: 15
         });
+        } else if (!!document.getElementById('pacific-heights')) {
 
 
         var map = new google.maps.Map(document.getElementById('pacific-heights'), {
@@ -94,6 +102,7 @@ function initMap() {
           scrollwheel: false,
           zoom: 15
         });
+        } else if (!!document.getElementById('presidio')) {
 
 
         var map = new google.maps.Map(document.getElementById('presidio'), {
@@ -101,6 +110,7 @@ function initMap() {
           scrollwheel: false,
           zoom: 15
         });
+        }
 
         // Create a marker and set its position.
         var marker = new google.maps.Marker({
