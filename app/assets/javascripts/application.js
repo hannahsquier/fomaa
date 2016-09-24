@@ -10,14 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require_tree .
+    //= require jquery
+    //= require jquery_ujs
 
 // $(document).ready(function() {
 //   $("#dropdown").click(function() {
 //     $("#hide").slideToggle("slow");
-//   });
+//   });Ï
 
 //   $("#USDollar").focus(function() {
 //     $(this).css('background-color', '#fed766');
@@ -26,8 +25,17 @@
 
 //   table1();
 // });
+
+// ready = function() {
+// var script = document.createElement('script');
+// script.type = 'text/javascript';
+// script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +'libraries=places&'+'callback=initialize';
+//   document.body.appendChild(script);
+//  };
+
+$(document).ready(
 function initMap() {
-    
+
         var fidi = {lat: 37.794536, lng: -122.400277};
         var mission = {lat: 37.759374, lng: -122.415612};
         var castro = {lat: 37.760867, lng: -122.435611};
@@ -120,7 +128,7 @@ function initMap() {
         });
 
 
-        for (i = 0; i < locations.length; i++) {  
+        for (i = 0; i < locations.length; i++) {
           marker = new google.maps.Marker({
           position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
           map: map
@@ -130,48 +138,55 @@ function initMap() {
     }
 }
 
+)
+// // Freelancer Theme JavaScript
 
-// Freelancer Theme JavaScript
+// (function($) {
+//     "use strict"; // Start of use strict
 
-(function($) {
-    "use strict"; // Start of use strict
+//     // jQuery for page scrolling feature - requires jQuery Easing plugin
+//     $('.page-scroll a').bind('click', function(event) {
+//         var $anchor = $(this);
+//         $('html, body').stop().animate({
+//             scrollTop: ($($anchor.attr('href')).offset().top - 50)
+//         }, 1250, 'easeInOutExpo');
+//         event.preventDefault();
+//     });
 
-    // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('.page-scroll a').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 50)
-        }, 1250, 'easeInOutExpo');
-        event.preventDefault();
-    });
+//     // Highlight the top nav as scrolling occurs
+//     $('body').scrollspy({
+//         target: '.navbar-fixed-top',
+//         offset: 51
+//     });
 
-    // Highlight the top nav as scrolling occurs
-    $('body').scrollspy({
-        target: '.navbar-fixed-top',
-        offset: 51
-    });
+//     // Closes the Responsive Menu on Menu Item Click
+//     $('.navbar-collapse ul li a').click(function(){
+//             $('.navbar-toggle:visible').click();
+//     });
 
-    // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function(){
-            $('.navbar-toggle:visible').click();
-    });
+//     // Offset for Main Navigation
+//     $('#mainNav').affix({
+//         offset: {
+//             top: 100
+//         }
+//     })
 
-    // Offset for Main Navigation
-    $('#mainNav').affix({
-        offset: {
-            top: 100
-        }
-    })
+//     // Floating label headings for the contact form
+//     $(function() {
+//         $("body").on("input propertychange", ".floating-label-form-group", function(e) {
+//             $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
+//         }).on("focus", ".floating-label-form-group", function() {
+//             $(this).addClass("floating-label-form-group-with-focus");
+//         }).on("blur", ".floating-label-form-group", function() {
+//             $(this).removeClass("floating-label-form-group-with-focus");
+//         });
+//     });
 
-    // Floating label headings for the contact form
-    $(function() {
-        $("body").on("input propertychange", ".floating-label-form-group", function(e) {
-            $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-        }).on("focus", ".floating-label-form-group", function() {
-            $(this).addClass("floating-label-form-group-with-focus");
-        }).on("blur", ".floating-label-form-group", function() {
-            $(this).removeClass("floating-label-form-group-with-focus");
-        });
-    });
+// })(jQuery);
+                // $(document).on('page:load',initMap); // the same but for the other loadings
 
-})(jQuery); // End of use strict
+// $.getScript('/assets/javascripts/application.js',function(){
+//                 $(document).ready(ready); //calls for the function we defined above (first loading)
+//                 $(document).on('page:load',initMap); // the same but for the other loadings
+//               });
+ //$(document).on('page:change',init);// End of use strict
