@@ -14,13 +14,17 @@
 
 ![Screenshot](screenshots/screenshot2.png)
 
-## 3. Info About Public Art and Bars
+## 3. Integration with Google Maps
 
 ![Screenshot](screenshots/screenshot3.png)
 
-## 4. General Info About the Neighborhood
+## 3. Info About Public Art and Bars
 
 ![Screenshot](screenshots/screenshot4.png)
+
+## 4. General Info About the Neighborhood
+
+![Screenshot](screenshots/screenshot5.png)
 
 ## Built With
 
